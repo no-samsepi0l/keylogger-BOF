@@ -1,4 +1,4 @@
-// KeyLog-BOF/keylog.axs
+// KeyLog-BOF/keylog.axs ---> where it should be
 var metadata = {
     name: "KeyLog-BOF",
     description: "Low-level keyboard capture BOF"
