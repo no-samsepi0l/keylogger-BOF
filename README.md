@@ -38,7 +38,6 @@ pacman -S mingw-w64-x86_64-gcc
 
 ### Compile the BOF
 
-```bash
 x86_64-w64-mingw32-gcc -c keylog.c -o keylog.o -O0 -Wall -D_WIN32_WINNT=0x0601
 ```
 
