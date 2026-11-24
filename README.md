@@ -116,4 +116,3 @@ The trade-off is 25 ms of latency and occasional missed keystrokes during very f
 ## License
 
 MIT — see `LICENSE`.
-```
